@@ -1,0 +1,23 @@
+<mat-toolbar [color]="'primary'">
+  <button 
+    mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+    (click)="drawer.toggle()"
+  >
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>Good Samaritan Bookkeeping Services</span>
+  <span class="example-spacer"></span>
+  <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>favorite</mat-icon>
+  </button>
+  <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>share</mat-icon>
+  </button>
+</mat-toolbar>
+
+<mat-drawer-container class="example-container" [hasBackdrop]="true">
+  <mat-drawer #drawer mode="push">I'm a drawer</mat-drawer>
+  <mat-drawer-content>
+    <personal-information-section></personal-information-section>
+  </mat-drawer-content>
+</mat-drawer-container>
